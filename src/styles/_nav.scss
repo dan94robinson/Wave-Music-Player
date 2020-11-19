@@ -3,18 +3,25 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: rgb(80, 80, 80);
+  h1 {
+    color: rgb(80, 80, 80);
+  }
   button {
     background: transparent;
-    border: none;
-    cursor: pointer;
-    border: 2px solid rgb(65, 65, 65);
-    padding: 0.5rem;
+    padding: 1rem;
     transition: all 0.3s ease;
-    border-radius: 0.35rem;
+    border-radius: 1rem;
+    color: rgb(80, 80, 80);
+    font-size: 0.9rem;
     &:hover {
-      background: rgb(65, 65, 65);
-      color: white;
     }
+
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.5),
+      6px 6px 10px rgba(70, 70, 70, 0.12);
+    outline: none;
+    border: 3px solid #ececec;
+    cursor: pointer;
   }
 }
 @media screen and (max-width: 768px) {
@@ -23,4 +30,10 @@ nav {
       z-index: 15;
     }
   }
+}
+.active-button {
+  box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.5),
+    6px 6px 10px rgba(70, 70, 70, 0.12),
+    inset -6px -6px 10px rgba(255, 255, 255, 0.5),
+    inset 6px 6px 10px rgba(70, 70, 70, 0.12);
 }
