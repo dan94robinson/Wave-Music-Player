@@ -78,9 +78,15 @@ const activeLibraryHandler = (nextPrev) => {
             <p>{songInfo.duration ? getTime(songInfo.duration) : '0:00'}</p>
         </div>
         <div className="play-control">
-            <FontAwesomeIcon onClick={() => skipTrackHandler('skip-back')} className='skip-back' size='2x' icon={faAngleLeft}/>
-            <FontAwesomeIcon onClick={playSongHandler} className='play' size='2x' icon={isPlaying ? faPause : faPlay}/>
-            <FontAwesomeIcon onClick={() => skipTrackHandler('skip-forward')} className='skip-forward' size='2x' icon={faAngleRight}/>
+            <div className="reverse-div" onClick={() => skipTrackHandler('skip-back')}>
+            <FontAwesomeIcon  className='skip-back' size='2x' icon={faAngleLeft}/>
+            </div>
+            <div className={`play-div ${isPlaying ? 'active-play' : ''}`} onClick={playSongHandler}>
+            <FontAwesomeIcon  className='play' size='2x' icon={isPlaying ? faPause : faPlay} />
+            </div>
+            <div className="forward-div" onClick={() => skipTrackHandler('skip-forward')}>
+            <FontAwesomeIcon  className='skip-forward' size='2x' icon={faAngleRight}/>
+            </div>
         </div>
         
         </div>
