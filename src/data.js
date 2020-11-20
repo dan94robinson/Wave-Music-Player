@@ -68,7 +68,15 @@ function chillHop() {
             active: false,
           },
           
-          
+          {
+        name: "Hipsters",
+        artist: 'Dan Robinson, EZLVR',
+        cover: EZLVR,
+        id: uuidv4(),
+        active: false,
+        color: ['#A6CADE', '#D68CBB'],
+        audio: Hipsters,
+    },
          
         {
           name: "Hurts But It Shouldn't",
@@ -79,15 +87,7 @@ function chillHop() {
           color: ['#A6CADE', '#D68CBB'],
           audio: hurtsButItShouldnt,
       },
-      {
-        name: "Hipsters",
-        artist: 'Dan Robinson, EZLVR',
-        cover: EZLVR,
-        id: uuidv4(),
-        active: false,
-        color: ['#A6CADE', '#D68CBB'],
-        audio: Hipsters,
-    },
+      
     {
       name: "SlooperSonic John B",
       artist: 'Austin and Anthony',
