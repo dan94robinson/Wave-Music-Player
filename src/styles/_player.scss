@@ -1,0 +1,143 @@
+.player {
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.time-control {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  input {
+    background: lightsalmon;
+    width: 100%;
+    -webkit-appearance: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  p {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+.play-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 40%;
+  svg {
+    cursor: pointer;
+  }
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+}
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+}
+.track {
+  background: lightblue;
+  width: 100%;
+  height: 1rem;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.animate-track {
+  background: rgb(204, 204, 204);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(0%);
+  pointer-events: none;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .time-control {
+    width: 70%;
+  }
+  .play-control {
+    width: 60%;
+  }
+}
+.reverse-div {
+  padding: 1.5rem 2rem;
+  -webkit-appearance: none;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12);
+  border-radius: 50%;
+  border-radius: 50%;
+  border: 4px solid #ececec;
+  outline: none;
+  cursor: pointer;
+  color: rgb(80, 80, 80);
+}
+
+.play-div {
+  padding: 2.2rem;
+  -webkit-appearance: none;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12);
+  border-radius: 50%;
+  border-radius: 50%;
+  outline: none;
+  border: 4px solid #ececec;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(80, 80, 80);
+}
+.forward-div {
+  padding: 1.5rem 2rem;
+  -webkit-appearance: none;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12);
+  border-radius: 50%;
+  border-radius: 50%;
+  outline: none;
+  border: 4px solid #ececec;
+  cursor: pointer;
+  color: rgb(80, 80, 80);
+}
+.active-play {
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+.reverse-div:active {
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+.forward-div:active {
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+@media screen and (max-width: 768px) {
+  .reverse-div {
+    padding: 0.8rem 1.2rem;
+  }
+  .play-div {
+    padding: 1.5rem;
+  }
+  .forward-div {
+    padding: 0.8rem 1.2rem;
+  }
+}
